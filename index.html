@@ -1,0 +1,63 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; background: #f3f9fb; margin: 0; padding: 0; }
+    .container { width: 100%; max-width: 450px; margin: 50px auto; background: #fff; padding: 32px 24px; border-radius: 10px; box-shadow: 0 4px 16px #0002;}
+    h1 { color: #1976d2; margin-top: 0;}
+    .input { width: 100%; padding: 12px; font-size: 18px; margin-bottom: 24px; border-radius: 6px; border: 1px solid #bbb;}
+    button { background: #1976d2; color: #fff; border: none; padding: 10px 20px; font-size: 18px; border-radius: 6px; cursor: pointer;}
+    #qr { margin-top: 24px; text-align: center; }
+    footer { text-align: center; margin-top: 40px; color: #999; }
+  </style>
+  <script type="module" crossorigin src="/qr-generator/assets/index-DYivYL48.js"></script>
+  <link rel="stylesheet" crossorigin href="/qr-generator/assets/index-x1XGuNl0.css">
+</head>
+<body>
+  <div class="container">
+    <h1>QR Generator</h1>
+    <label for="text">Nhập nội dung cần tạo QR:</label>
+    <input type="text" id="text" class="input" placeholder="Ví dụ: https://github.com/dat-hq">
+    <button onclick="generateQR()">Tạo mã QR</button>
+    <div id="qr"></div>
+  </div>
+  <footer>
+    © 2025 <a href="https://github.com/dat-hq" style="color: inherit">dat-hq</a> • QR Generator
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+  <script>
+    function generateQR() {
+      var text = document.getElementById('text').value;
+      var qrDiv = document.getElementById('qr');
+      qrDiv.innerHTML = '';
+      if (text.trim() === '') return;
+      var qr = new QRious({
+        value: text,
+        size: 200,
+      });
+      var img = document.createElement('img');
+      img.src = qr.toDataURL();
+      qrDiv.appendChild(img);
+    }
+  </script>
+</body>
+=======
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/qr-generator/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <!-- Thêm dòng này -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+>>>>>>> 4aa41e2 (Initial commit)
+</html>
